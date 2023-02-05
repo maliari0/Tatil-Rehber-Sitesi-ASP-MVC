@@ -1,0 +1,16 @@
+﻿<div class="content-form">
+    <h3>Yorum</h3>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <form method="post">
+        <input type="hidden" placeholder="ID" name="BlogId" value="@ViewBag.deger" />
+        <input type="text" placeholder="Ad Soyad" name="KullaniciAdi" required="" />
+        <input type="text" placeholder="Email" name="Mail" required />
+        <textarea placeholder="Yorum" name="Yorum"></textarea>
+        <input type="submit" value="GÖNDER" id="yorumYapButton" />
+    </form>
+    
+
+
+</div>

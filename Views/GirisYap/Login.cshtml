@@ -1,0 +1,57 @@
+﻿@model WebProje2.Models.Siniflar.Admin
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Login" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="~/logintema/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="//fonts.googleapis.com/css?family=Cormorant+SC:300,400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+</head>
+
+<body>
+    <div class="padding-all">
+        <div class="header">
+            <h1>TRAVEN</h1>
+        </div>
+        <script src="~/Scripts/jquery-3.4.1.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+        <div class="design-w3l">
+            <div class="mail-form-agile">
+                @using (Html.BeginForm("Login", "GirisYap", FormMethod.Post))
+                {
+                    <div class="form-group">
+                        @Html.TextBox("Kullanici", "", new { placeholder = "Kullanıcı Adı", @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBox("Sifre", "", new { placeholder = "Şifre", @class = "form-control" })
+                    </div>
+                    @*<input type="text" name="Kullanici" placeholder="Kullanıcı Adı" required/>
+                    <input type="password" name="Sifre" class="padding" placeholder="Şifre" required/>*@
+                    <input type="submit" value="Giriş Yap" id="girisYapButton">
+                }
+            </div>
+            <div class="clear"> </div>
+        </div>
+        <script>
+            $('#girisYapButton').submit(function () {
+                swal("Giriş Başarılı", "Lütfen Bekleyiniz...", "success");
+            });
+        </script>
+        <div class="footer">
+            <p>©Traven Co.</p>
+        </div>
+    </div>
+</body>
+</html>

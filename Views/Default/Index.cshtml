@@ -1,0 +1,110 @@
+﻿@using WebProje2.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Traven</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script>
+    $(function () {
+      $("#slider1").responsiveSlides({
+         auto: true,
+		 nav: true,
+		 speed: 500,
+		 namespace: "callbacks",
+      });
+    });
+    </script>
+</head>
+<body>
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot">Tatil & Seyahat Rehberi</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <a href="https://www.rezervin.com" target="_blank" rel="noopener nofollow"><img src="~/web/images/glass.png" alt=""> </a>
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restoranlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <a href="https://www.kayak.com/flights/" target="_blank" rel="noopener nofollow"><img src="~/web/images/flight.png" alt=""> </a>
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuşlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <a href="https://www.kayak.com/hotels/" target="_blank" rel="noopener nofollow"><img src="~/web/images/group.png" alt=""> </a>
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Otel</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <a href="https://www.kayak.com/cars/" target="_blank" rel="noopener nofollow"><img src="~/web/images/key.png" alt=""> </a>
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Araba Kiralama</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:650px;height:365px">
+                            <ul class="rslides" id="slider1">
+                                @foreach(var x in Model) {
+                                <li><img src="@x.BlogImage" alt=""></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatilci ayağınıza geldi.</h3>
+                    <p>Gitmek istediğiniz bir yer var ama plan yapamıyor musunuz? Hiç sorun değil!</p>
+                    <p>Bu gezi rehberi sayfasında istediğiniz yere dair tüm bilgiler yer alıyor.</p>
+                    <p>Yazmış olduğum bloglarda uçuş, kalınacak oteller, güzel restoranlar ve eğer varsa araç kiralama şirketleri yer alıyor.</p>
+                    <p>Yorum yapmayı unutmayınız...</p>
+                </div>
+              
+                @Html.Action("Partial1", "Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3","Default")
+                        @Html.Action("Partial4","Default")
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+

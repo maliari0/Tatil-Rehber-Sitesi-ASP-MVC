@@ -1,0 +1,23 @@
+﻿@using WebProje2.Models.Siniflar
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>Hakkımızda</h3>
+            @foreach (var x in Model)
+            {
+                <img src="~/web/images/rsz_1traven-logos_transparent.png" alt="" />
+
+                <p>Bu proje .Net Framework teknolojisi ile MVC5 kullanılarak Muhammed Ali ARI tarafından yapılmıştır. </p>
+                <p>2012721010</p>
+            }
+
+        </div>
+    </div>
+</div>
+

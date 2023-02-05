@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>İletişim</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+
+    <div class="contact">
+        <div class="wrap">
+            <div class="contact-top">
+                <h3>İletişim Bilgileri</h3>
+                <p> Bize ulaşmak için aşağıdaki bilgileri kullanabilirsiniz. İletmek istediğiniz bir mesaj varsa yazabilirsiniz.</p>
+            </div>
+            @Html.Action("MesajYolla", "Contact")
+            <div class="clear"></div>
+            <div class="contact-bottom">
+                <div class="contact-left">
+                    <div class="contact-add">
+                        <h3>Adres:</h3>
+                        <p> Isparta Uygulamalı Bilimler Üniversitesi</p>
+                        <p>Telefon No : 0123464789</p>
+                        <p>Email : <a href="mailto:l2012721010@isparta.edu.tr">l2012721010@isparta.edu.tr</a></p>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6306.66374716729!2d30.5610097!3d37.7822615!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x252d62f67fbb1263!2sIsparta%20KYK%20%C3%96%C4%9Frenci%20Yurdu!5e0!3m2!1sen!2str!4v1672854062867!5m2!1sen!2str" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>
+
